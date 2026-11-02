@@ -30,6 +30,24 @@ Read first: `docs/vision.md`, `docs/styleguide.md`. Decisions: `docs/adr/`.
 5. An issue is closed only when its "Done when" holds. If it can't hold yet, leave it open and
    say what it waits on.
 
+## What every issue carries
+
+Agreed by the lane's human (Mateusz) on 2026-11-02, for every plan split here:
+
+- Label `plan:<plan name>` from the plan's frontmatter (e.g. `plan:morning-digest`).
+- The body, in this order:
+
+  ```
+  Source: plan.md § <section, e.g. 1 or 2a>
+
+  Scope: <what this issue changes, and what it doesn't>
+  Done when: <the plan's check, word for word where it has one>
+  Blocked by: <#n, … or —>
+  ```
+
+- A step that waits on someone outside the lane (a reviewer, a client) is done only when they
+  confirm. Keep that issue open until then, and let the clean-up issue be blocked by it.
+
 ## Skills
 
 Shared skills live in `.agents/skills/`, one folder each, `SKILL.md` inside. That folder is the
